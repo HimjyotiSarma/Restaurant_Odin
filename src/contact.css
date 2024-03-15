@@ -1,0 +1,17 @@
+#contact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  margin: 100px 0;
+}
+.contactArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactImage {
+  width: 100%;
+  min-width: 300px;
+}

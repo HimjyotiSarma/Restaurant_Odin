@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'PresleySlab-Regular';
+  src: url('./assets/fonts/PresleySlab-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PresleySlab-Medium';
+  src: url('./assets/fonts/PresleySlab-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'PresleySlab-Bold';
+  src: url('./assets/fonts/PresleySlab-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PresleySlab-ExtraBold';
+  src: url('./assets/fonts/PresleySlab-ExtraBold.otf') format('opentype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'PresleySlab-Regular';
+  src: url('./assets/fonts/PresleySlab-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PresleySlab-Light';
+  src: url('./assets/fonts/PresleySlab-Light.otf') format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'PresleySlab-ExtraLight';
+  src: url('./assets/fonts/PresleySlab-ExtraLight.otf') format('opentype');
+  font-weight: lighter;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  background-color: hsl(341, 100%, 85%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'PresleySlab-Regular';
+}
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  padding-bottom: 5px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+button.active {
+  border-bottom: 2px red;
+}
+header {
+  width: 100%;
+  padding: 20px;
+  font-family: 'PT Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+#content {
+  height: 100%;
+}
+header img {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+}
+.socials a img {
+  max-width: 30px;
+  margin-right: 10px;
+}
+button {
+  font-family: inherit;
+}
+nav {
+  display: flex;
+  align-items: center;
+  /* max-width: 500px; */
+}
+nav button {
+  margin: 0 10px;
+}
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#home {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  justify-content: center;
+  /* align-items: center; */
+  height: 80%;
+  padding: 20px;
+}
+h1 {
+  font-size: 6rem;
+  color: rgb(255, 249, 225);
+  /* position: relative; */
+}
+.cover-img {
+  margin: auto;
+}
+.head_title {
+  position: relative;
+}
+.side_img {
+  position: absolute;
+  max-width: 400px;
+  right: 80px;
+  bottom: 40px;
+}
+.active {
+  /* This is set so that the ::before pseudo-element is absolutely 
+     positioned relative to the button. */
+  position: relative;
+}
+
+.active::before {
+  content: '';
+
+  /* Absolutely positions the underline relative to the button. */
+  position: absolute;
+
+  /* This aligns the underline so that it is at the bottom of 
+     the button. */
+  bottom: 0;
+
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(125, 27, 191);
+}
+@media (max-width: 740px) {
+  header {
+    display: block;
+  }
+  .socials {
+    display: none;
+  }
+}
